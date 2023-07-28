@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--上部显示-->
+    <RelativeLayout
+        android:id="@+id/rl_pc_live_top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <!--大屏布局 文档 视频-->
+        <RelativeLayout
+            android:id="@+id/rl_video_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#000000">
+
+
+        </RelativeLayout>
+
+        <!--房间控制界面-->
+        <com.bokecc.livemodule.replay.room.ReplayRoomLayout
+            android:id="@+id/replay_room_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+
+    <!--底部显示-->
+    <LinearLayout
+        android:id="@+id/ll_pc_replay_msg_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2">
+
+        <include layout="@layout/replay_pc_portrait_msg_layout" />
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">观看端</string>
+    <!-- 导航页 -->
+    <string name="pilot_version">获得场景视频\u3000v%s</string>
+    <string name="pilot_live">观看直播</string>
+    <string name="pilot_replay">观看回放</string>
+    <string name="pilot_local_replay">离线回放</string>
+    <string name="pilot_mix_play">回放切换</string>
+    <string name="pilot_test">测试界面</string>
+
+    <string name="scan_text">将二维码置于框内, 即可自动扫描</string>
+    <string name="username_max_length">用户名限制在20个字符以内</string>
+
+
+</resources>

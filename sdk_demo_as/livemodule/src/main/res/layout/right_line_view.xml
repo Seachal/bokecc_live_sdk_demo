@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentEnd="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/root"
+        android:layout_width="205dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:alpha="0.8"
+        android:background="#ff0A0A0A"
+        android:orientation="vertical"
+        android:paddingTop="53dp">
+
+        <!--音频模式切换-->
+        <LinearLayout
+            android:id="@+id/ll_video_audio_root"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginBottom="28.5dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="音频模式"
+                android:textColor="@android:color/white"
+                android:textSize="14sp" />
+
+            <Switch
+                android:id="@+id/audio_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="17dp"
+                android:layout_marginLeft="10dp"
+                android:switchMinWidth="40dp"
+                android:thumb="@drawable/thumb"
+                android:track="@drawable/track" />
+        </LinearLayout>
+
+        <!--线路切换-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginBottom="28.5dp"
+            android:text="线路切换"
+            android:textColor="@android:color/white"
+            android:textSize="14sp" />
+
+        <!--线路列表-->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:id="@+id/ll_line"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" />
+        </ScrollView>
+    </LinearLayout>
+
+</RelativeLayout>

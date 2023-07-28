@@ -1,0 +1,41 @@
+apply plugin: 'com.android.application'
+
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        applicationId "com.bokecc.dwlivedemo"
+        versionCode rootProject.ext.android.SDK_VERSION_CODE
+        versionName rootProject.ext.android.SDK_VERSION
+
+        ndk {
+            abiFilters "armeabi-v7a"//,"arm64-v8a"
+        }
+
+        multiDexEnabled true
+
+        //  renderscriptSupportModeEnabled true
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+
+}
+
+dependencies {
+    // test
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    // support
+    implementation 'com.android.support:support-annotations:28.0.0'
+
+    // 接入demo
+    implementation project(':dwlivedemo')
+
+
+}
+

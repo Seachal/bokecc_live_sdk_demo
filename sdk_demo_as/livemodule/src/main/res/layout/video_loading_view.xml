@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@id/id_popup_window_outside_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#99000000">
+    <!--视频大窗显示-->
+    <RelativeLayout
+        android:id="@+id/rl_large_root"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone">
+        <!--文字提示-->
+        <TextView
+            android:id="@+id/tv_video_loadingtext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="视频加载中"
+            android:textColor="@android:color/white" />
+
+        <!--大窗网速提示-->
+        <TextView
+            android:id="@+id/tv_net"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@+id/tv_video_loadingtext"
+            android:text="0kb/s"
+            android:textColor="@android:color/white" />
+
+    </RelativeLayout>
+    <!--视频小窗显示-->
+    <RelativeLayout
+        android:id="@+id/rl_small_root"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="visible">
+        <!--文字提示-->
+        <TextView
+            android:id="@+id/tv_video_loading_text2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:text="视频加载中"
+            android:textColor="@android:color/white"
+            android:textSize="12sp" />
+        <!--小窗网速提示-->
+        <TextView
+            android:id="@+id/tv_net_small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_video_loading_text2"
+            android:layout_alignStart="@+id/tv_video_loading_text2"
+            android:layout_alignEnd="@+id/tv_video_loading_text2"
+            android:gravity="center_horizontal"
+            android:text="0kb/s"
+            android:textColor="@android:color/white"
+            android:textSize="11sp" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

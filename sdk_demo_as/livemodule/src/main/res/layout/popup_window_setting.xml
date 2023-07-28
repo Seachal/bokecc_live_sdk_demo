@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#00000000">
+    <View
+        android:id="@+id/pop_bg"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#00000000"/>
+    <LinearLayout
+        android:id="@+id/content_root"
+        android:layout_width="match_parent"
+        android:layout_height="357dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:background="#FFFFFF">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="更多"
+                android:layout_marginLeft="22dp"
+                android:textColor="#333333"
+                android:textSize="14sp"
+                android:layout_centerVertical="true"/>
+            <ImageView
+                android:id="@+id/tv_close"
+                android:layout_width="35dp"
+                android:padding="10dp"
+                android:src="@drawable/private_close"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_height="35dp"/>
+            <View style="@style/loginLineBottomViewTheme" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

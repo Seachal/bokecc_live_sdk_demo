@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--显示视频窗口-->
+    <com.bokecc.livemodule.view.ResizeTextureView
+        android:id="@+id/live_video_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true" />
+
+    <!--进度提示-->
+    <com.bokecc.livemodule.view.VideoLoadingView
+        android:id="@+id/video_progressBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!--音频模式背景图-->
+    <LinearLayout
+        android:id="@+id/audio_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="27dp"
+            android:layout_height="37dp"
+            android:src="@drawable/ic_audio" />
+
+        <ImageView
+            android:id="@+id/iv_audio_undulate"
+            android:layout_width="100dp"
+            android:layout_height="27dp"
+            android:src="@drawable/gif_audio_undulate" />
+    </LinearLayout>
+
+</RelativeLayout>

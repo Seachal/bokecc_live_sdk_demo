@@ -1,0 +1,46 @@
+<resources>
+    <!--登录页-->
+    <string name="login_uid_hint">16位账号ID</string>
+    <string name="login_roomid_hint">32位直播间ID</string>
+    <string name="login_name_hint">聊天中显示的名字</string>
+    <string name="login_t_password_hint">讲师密码</string>
+    <string name="login_s_password_hint">观看密码</string>
+    <string name="login_liveid_hint">16位直播ID</string>
+    <string name="login_recordid_hint">16位回放ID</string>
+
+    <!-- 聊天 -->
+    <string name="send_chat">发送</string>
+    <string name="chat_input_hint">我也说两句吧~</string>
+    <string name="private_chat_list_tip">私聊列表</string>
+
+    <!-- 问答 -->
+    <string name="send_question">发送</string>
+    <string name="question_input_hint">我要提问～</string>
+
+    <!--问卷-->
+    <string name="questionnaire_title">问卷调查</string>
+    <string name="questionnaire_submit">提交</string>
+
+    <!--连麦-->
+    <string name="pref_speakerphone_key">speakerphone_preference</string>
+    <string name="pref_speakerphone_title">Speakerphone.</string>
+    <string name="pref_speakerphone_dlg">Speakerphone.</string>
+    <string name="pref_speakerphone_default">auto</string>
+    <string name="btn_send">发送</string>
+    <string name="no_introduction">暂无简介</string>
+
+
+    <!--倒计时-->
+
+    <string name="string_utils_count_down_day_hour_minute_second">%1$d天 %2$d小时%3$d分钟%4$d秒</string>
+    <string name="string_utils_count_down_hour_minute_second">0天%1$d小时%2$d分钟%3$d秒</string>
+    <string name="string_utils_count_down_minute_second">0天00小时%1$d分钟%2$d秒</string>
+    <string name="string_utils_count_down_second">0天00小时00分钟%d秒</string>
+
+
+    <string-array name="spinner_scale_type">
+        <item>保持横竖比</item>
+        <item>拉伸全屏</item>
+        <item>裁剪</item>
+    </string-array>
+</resources>

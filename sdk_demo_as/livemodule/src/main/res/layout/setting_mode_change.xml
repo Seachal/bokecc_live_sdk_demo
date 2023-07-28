@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="22dp"
+    android:layout_marginBottom="10dp"
+    android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:textSize="15sp"
+        android:textColor="#666666"
+        android:text="音频模式:" />
+
+    <Switch
+        android:id="@+id/audio_switch"
+        android:layout_width="40dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="10dp"
+        android:switchMinWidth="40dp"
+        android:thumb="@drawable/setting_thumb"
+        android:track="@drawable/track_setting" />
+</LinearLayout>

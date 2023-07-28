@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 按下状态-->
+    <item android:drawable="@drawable/replay_seek_playplan_hov" android:state_enabled="true" android:state_pressed="true" />
+    <!-- 普通无焦点状态 -拖动按钮-->
+    <item android:drawable="@drawable/replay_seek_playplan_nor" android:state_enabled="false" android:state_pressed="false" />
+    <!-- 有焦点状态-->
+    <item android:drawable="@drawable/replay_seek_playplan_hov" android:state_enabled="true" android:state_pressed="false" />
+    <!-- 有焦点 -->
+    <item android:drawable="@drawable/replay_seek_playplan_nor" android:state_enabled="true" />
+</selector>

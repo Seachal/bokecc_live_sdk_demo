@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_pc_portrait_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="MissingDefaultResource">
+
+    <!--手势拖动界面-->
+    <RelativeLayout
+        android:id="@+id/seek_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#b3000000"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_seek_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorBackHov"
+                android:textSize="17sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:text="/"
+                android:textColor="@color/loginBg"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/tv_sum_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/loginBg"
+                android:textSize="17sp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <!--进度记忆显示-->
+    <TextView
+        android:id="@+id/progress_record"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="42dp"
+        android:background="@drawable/shape_jump"
+        android:paddingStart="20dp"
+        android:paddingTop="5dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="5dp"
+        android:text="您上次观看到"
+        android:textColor="@android:color/white"
+        android:visibility="gone" />
+
+    <!--错误界面-->
+    <LinearLayout
+        android:id="@+id/id_error_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/viewfinder_mask"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/id_msg_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="视频加载失败"
+            android:textColor="#fff"
+            android:textSize="@dimen/pc_live_top_title" />
+
+        <TextView
+            android:id="@+id/id_try"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/video_error_button_bg"
+            android:paddingLeft="15dp"
+            android:paddingTop="3dp"
+            android:paddingRight="15dp"
+            android:paddingBottom="3dp"
+            android:text="点击重试"
+            android:textColor="@color/write_color_selector"
+            android:textSize="@dimen/pc_live_top_title" />
+
+    </LinearLayout>
+
+    <!--顶部菜单-->
+    <RelativeLayout
+        android:id="@+id/rl_portrait_live_top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:background="@drawable/living_top_bg"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <!--返回按钮-->
+            <ImageView
+                android:id="@+id/iv_portrait_live_close"
+                style="@style/phoneLiveLandscapeTitleViewTheme"
+                android:layout_alignParentLeft="true"
+                android:paddingRight="5dp"
+                android:src="@drawable/title_back" />
+
+            <!--直播间标题-->
+            <TextView
+                android:id="@+id/tv_portrait_live_title"
+                style="@style/phoneLiveLandscapeTitleViewTheme"
+                android:layout_toEndOf="@id/iv_portrait_live_close"
+                android:text="直播间标题"
+                tools:ignore="HardcodedText" />
+
+
+            <LinearLayout
+                android:id="@+id/id_port_video_doc_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <!--视频文档更多配置-->
+                <ImageView
+                    android:id="@+id/video_doc_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="20dp"
+                    android:src="@drawable/ic_setting_select"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <!--底部逻辑-->
+    <RelativeLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/living_bottom_bg"
+        android:visibility="visible">
+
+        <!--竖屏下方布局-->
+        <RelativeLayout
+            android:id="@+id/replay_port_bottom_layout"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:visibility="visible">
+            <!-- 视频全屏 -->
+            <ImageView
+                android:id="@+id/iv_portrait_live_full"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/ic_full_screen" />
+            <!--操作按钮-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@id/iv_portrait_live_full"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/replay_play_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/replay_play_status" />
+
+                <TextView
+                    android:id="@+id/replay_current_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="5dp"
+                    android:text="00:00"
+                    android:textColor="#FF9500"
+                    android:textSize="12sp" />
+                <!--分割线-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="1dp"
+                    android:text="/"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/replay_duration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="00:00"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp" />
+
+                <com.bokecc.livemodule.view.RePlaySeekBar
+                    android:id="@+id/replay_progressbar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:focusable="true"
+                    android:maxHeight="3dp"
+                    android:minHeight="3dp"
+                    android:progressDrawable="@drawable/seekbar_define_style"
+                    android:thumb="@drawable/seekbar_thumb" />
+
+                <ImageView
+                    android:id="@+id/video_doc_switch"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="切换文档"
+                    android:src="@drawable/video_doc_switch"
+                    android:layout_gravity="center_vertical"
+                    />
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <!--横屏下方布局-->
+        <RelativeLayout
+            android:id="@+id/replay_land_bottom_layout"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:visibility="gone">
+
+            <FrameLayout
+                android:id="@+id/replay_dot_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.bokecc.livemodule.view.RePlaySeekBar
+                    android:id="@+id/replay_land_progressbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:focusable="true"
+                    android:maxHeight="3dp"
+                    android:minHeight="3dp"
+                    android:progressDrawable="@drawable/seekbar_define_style"
+                    android:thumb="@drawable/seekbar_thumb" />
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/replay_dot_layout"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <!--播放暂停按钮-->
+                <ImageView
+                    android:id="@+id/replay_land_play_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/replay_play_status" />
+
+                <!--播放时间-->
+                <TextView
+                    android:id="@+id/replay_land_current_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="5dp"
+                    android:text="00:00"
+                    android:textColor="#FF9500"
+                    android:textSize="12sp" />
+
+                <!--分割线-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="1dp"
+                    android:text="/"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp" />
+
+                <!--总共的时间-->
+                <TextView
+                    android:id="@+id/replay_land_duration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="00:00"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp" />
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+                <!--倍速-->
+                <TextView
+                    android:id="@+id/replay_land_speed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:background="#00000000"
+                    android:gravity="center"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:layout_marginRight="5dp"
+                    android:text="倍速"
+                    android:textColor="#FFFFFF"
+                    android:textSize="13sp" />
+                <!--视频清晰度-->
+                <TextView
+                    android:id="@+id/replay_land_quality"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:background="#00000000"
+                    android:gravity="center"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:text="原画"
+                    android:textColor="#FFFFFF"
+                    android:textSize="13sp"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/video_doc_land_switch"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/video_doc_switch"
+                    android:layout_gravity="center_vertical"
+                    />
+            </LinearLayout>
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <!--跑马灯-->
+    <com.bokecc.sdk.mobile.live.widget.MarqueeView
+        android:id="@+id/marquee_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#00000000"
+        android:visibility="gone" />
+
+    <!--横屏右侧：弹出界面-->
+    <com.bokecc.livemodule.replay.room.rightview.ReplayRightView
+        android:id="@+id/right_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:orientation="vertical"
+        android:visibility="gone" />
+
+
+</RelativeLayout>

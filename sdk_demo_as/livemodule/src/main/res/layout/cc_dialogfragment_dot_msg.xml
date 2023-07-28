@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dot_view_msg_root"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/dot_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/cc_indicator_bg">
+
+        <TextView
+            android:id="@+id/tv_dot_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:lines="2"
+            android:maxWidth="240dp"
+            android:maxEms="10"
+            android:textColor="#e2ffffff"
+            android:textSize="13sp" />
+
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/tv_dot_msg"
+            android:scaleType="centerInside"
+            android:src="@drawable/cc_indicator_play_ic" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/arrow_indicator"
+        android:layout_width="15dp"
+        android:layout_height="10dp"
+        android:layout_gravity="center_horizontal"
+        android:scaleType="fitXY"
+        android:src="@drawable/cc_arrow_ic" />
+
+
+</LinearLayout>

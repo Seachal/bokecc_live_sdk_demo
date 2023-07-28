@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="22dp"
+    android:layout_marginBottom="10dp"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/tv_setting_title"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:textColor="#666666"
+        android:textSize="15sp"
+        android:layout_marginRight="10dp"
+        android:text="线路切换:" />
+
+    <com.bokecc.livemodule.view.WarpLinearLayout
+        android:id="@+id/ll_setting_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#00000000"
+        app:grivate="left"
+        app:horizontal_Space="35dp"
+        app:isFull="false"
+        android:layout_marginRight="66dp"
+        app:vertical_Space="20dp"></com.bokecc.livemodule.view.WarpLinearLayout>
+
+</LinearLayout>

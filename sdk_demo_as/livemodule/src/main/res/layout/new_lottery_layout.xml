@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@id/id_popup_window_outside_view"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="#51000000">
+
+    <LinearLayout
+        android:id="@id/id_popup_window_anim_view"
+        android:layout_width="325dp"
+        android:layout_height="280dp"
+        android:background="@drawable/shape_bg_reply_edittext"
+        android:orientation="vertical" >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="15sp"
+                android:textColor="#38404B"
+                android:text="抽奖啦"
+                android:layout_centerInParent="true"
+                android:gravity="center"/>
+            <ImageView
+                android:id="@+id/iv_lottery_close"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/private_close"/>
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#B5B7BE" />
+        <ImageView
+            android:scaleType="centerInside"
+            android:id="@+id/iv_lottery_loading"
+            android:src="@drawable/lottery_loading_gif"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,27 @@
+<resources>
+
+    <!--导航界面：按钮样式  -->
+    <style name="pilotButtonTheme" parent="@style/Widget.AppCompat.Button.Borderless">
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_width">260dp</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:background">@drawable/pilot_button_bg</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textSize">17sp</item>
+    </style>
+
+    <!--直播界面：功能Item按钮样式-->
+    <style name="liveRadioButtonTheme">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">#333333</item>
+        <item name="android:textSize">@dimen/pc_live_infos_tag</item>
+        <item name="android:button">@null</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@drawable/portrait_tag_bg</item>
+        <item name="android:visibility">gone</item>
+    </style>
+
+
+</resources>

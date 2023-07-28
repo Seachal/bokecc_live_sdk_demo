@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--上边部分-->
+    <RelativeLayout
+        android:id="@+id/rl_pc_live_top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@android:color/black">
+
+        <!--大屏：文档、视频、连麦 -->
+        <RelativeLayout
+            android:id="@+id/rl_video_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <!--房间其他控制-->
+        <com.bokecc.livemodule.live.room.LiveRoomLayout
+            android:id="@+id/live_room_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </RelativeLayout>
+
+    <!--下边部分-->
+    <RelativeLayout
+        android:id="@+id/ll_pc_live_msg_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2">
+
+        <!--中间的tab-->
+        <include layout="@layout/live_pc_portrait_msg_layout" />
+
+        <!--下方的功能Lab-->
+        <com.bokecc.livemodule.live.morefunction.MoreFunctionLayout
+            android:id="@+id/more_function_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

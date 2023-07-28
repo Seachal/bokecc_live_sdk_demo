@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/viewfinder_mask"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/id_msg_tips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="播放结束"
+        android:textColor="#fff"
+        android:textSize="@dimen/pc_live_top_title" />
+
+    <TextView
+        android:id="@+id/id_try"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/video_error_button_bg"
+        android:paddingLeft="15dp"
+        android:paddingTop="3dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="3dp"
+        android:text="重新播放"
+        android:textColor="@color/write_color_selector"
+        android:textSize="@dimen/pc_live_top_title" />
+</LinearLayout>

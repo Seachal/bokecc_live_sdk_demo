@@ -1,0 +1,28 @@
+apply from: "conf.gradle"
+buildscript {
+    repositories {
+        jcenter()
+        mavenCentral()
+        google()
+        maven { url 'https://jitpack.io' }
+
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.5.3'
+    }
+}
+
+allprojects {
+    repositories {
+        // ---------------------必填->线上maven仓库----------------------
+        maven { url 'http://nexus-app.bokecc.com/repository/sdk-group/' }
+        jcenter()
+        mavenCentral()
+        google()
+        maven { url 'https://jitpack.io' }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

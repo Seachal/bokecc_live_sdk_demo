@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="63dp"
+    android:orientation="vertical">
+    <com.bokecc.livemodule.view.HeadView
+        android:id="@+id/hv_user_portrait"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/user_head_icon"/>
+    <TextView
+        android:id="@+id/tv_username"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:text="哈哈哈"
+        android:textSize="12sp"
+        android:textColor="#333333"
+        android:layout_marginTop="10dp"
+        android:includeFontPadding="false"
+        android:lineSpacingMultiplier="0.9"
+        android:maxLines="1"
+        android:maxEms="3"
+        android:ellipsize="end"/>
+</LinearLayout>
